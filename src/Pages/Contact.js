@@ -4,14 +4,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import hello from "../Assests/hello.png"
 import { Footer } from "../Layouts/Footer";
+import { useNavigate } from "react-router-dom";
 
 export const Contact = () => {
+    const navigate = useNavigate()
+
+    const homeButton = () => {
+        navigate("/")
+    }
+    const worksButton = () => {
+        navigate("/works")
+    }
+    const contactButton = () => {
+        navigate("/contact")
+    }
     return (
         <div>
             <div className="px-12 py-10 flex flex-row justify-end gap-6">
-                <button className="font-bold cursor-pointer">Home</button>
-                <button className="font-bold cursor-pointer">Works</button>
-                <button className="font-bold cursor-pointer">Contact</button>
+                <button onClick={homeButton} className="font-bold cursor-pointer">Home</button>
+                <button onClick={worksButton} className="font-bold cursor-pointer">Works</button>
+                <button onClick={contactButton} className="font-bold cursor-pointer">Contact</button>
             </div>
             <div className="px-[8rem] pt-[5rem] flex flex-row justify-between">
                 <div className="flex flex-col items-start gap-12">
