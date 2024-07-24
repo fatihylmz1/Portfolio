@@ -4,7 +4,7 @@ import React from "react";
 
 export const Footer = () => {
     return (
-        <div className="flex flex-row justify-center gap-12 py-32">
+        <div className="flex flex-row justify-center gap-12 pb-16">
             <a href="https://github.com/fatihylmz1" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
